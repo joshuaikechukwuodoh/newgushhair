@@ -1,0 +1,73 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Product",
+      "description": "A hair product in the store",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "price": { "type": "number" },
+        "description": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "category": { "type": "string", "enum": ["Wig", "Bundle", "Closure", "Other"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "price", "category"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "A customer order",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "customerName": { "type": "string" },
+        "productName": { "type": "string" },
+        "status": { "type": "string", "enum": ["Pending", "Delivered", "Cancelled"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["customerName", "productName", "status"]
+    },
+    "SiteSettings": {
+      "title": "Site Settings",
+      "description": "Global site configuration",
+      "type": "object",
+      "properties": {
+        "siteName": { "type": "string" },
+        "contactInfo": { "type": "string" },
+        "heroImage": { "type": "string" },
+        "bannerText": { "type": "string" },
+        "advertText": { "type": "string" }
+      }
+    },
+    "User": {
+      "title": "User",
+      "description": "App user profile",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["admin", "customer"] }
+      },
+      "required": ["uid", "email", "role"]
+    }
+  },
+  "firestore": {
+    "products": {
+      "schema": { "$ref": "Product" },
+      "description": "Store products"
+    },
+    "orders": {
+      "schema": { "$ref": "Order" },
+      "description": "Customer orders"
+    },
+    "settings": {
+      "schema": { "$ref": "SiteSettings" },
+      "description": "Global settings (single document 'main')"
+    },
+    "users": {
+      "schema": { "$ref": "User" },
+      "description": "User profiles"
+    }
+  }
+}

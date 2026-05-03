@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guss Hairs | Premium Hair Vendor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>
+  <body class="bg-[#fafafa] font-script text-gray-900 overflow-x-hidden">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <button id="mobile-menu-toggle" class="p-2 md:hidden hover:bg-gray-100 rounded-full transition-colors mr-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <a href="#" id="logo-link" class="text-3xl font-blackletter tracking-wider text-black hover:opacity-70 transition-opacity">Guss Hairs</a>
+        </div>
+        
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#" id="home-link" class="text-sm font-serif font-bold italic hover:text-gray-500 transition-colors">Home</a>
+          <a href="#" id="shop-all-link" class="text-sm font-serif font-bold italic hover:text-gray-500 transition-colors">Shop All</a>
+          <div class="relative group">
+            <button class="text-sm font-serif font-bold italic hover:text-gray-500 transition-colors flex items-center gap-1 py-4">
+              Wigs
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="absolute top-full left-0 bg-white shadow-xl rounded-xl py-3 min-w-[200px] hidden group-hover:block border border-gray-50 animate-in fade-in slide-in-from-top-2 duration-200">
+              <a href="#" data-wig-type="All" class="wig-sub-link block px-5 py-2.5 text-sm font-serif font-bold italic hover:bg-gray-50 transition-colors">All Wigs</a>
+              <div class="h-px bg-gray-50 my-1 mx-3"></div>
+              <a href="#" data-wig-type="Bone Straight" class="wig-sub-link block px-5 py-2.5 text-sm font-serif font-bold italic hover:bg-gray-50 transition-colors">Bone Straight</a>
+              <a href="#" data-wig-type="Pixie Cut" class="wig-sub-link block px-5 py-2.5 text-sm font-serif font-bold italic hover:bg-gray-50 transition-colors">Pixie Cut</a>
+              <a href="#" data-wig-type="Deep Wave" class="wig-sub-link block px-5 py-2.5 text-sm font-serif font-bold italic hover:bg-gray-50 transition-colors">Deep Wave</a>
+            </div>
+          </div>
+          <div class="relative group">
+            <button class="text-sm font-serif font-bold italic hover:text-gray-500 transition-colors flex items-center gap-1 py-4">
+              Bundles
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="absolute top-full left-0 bg-white shadow-xl rounded-xl py-3 min-w-[200px] hidden group-hover:block border border-gray-50 animate-in fade-in slide-in-from-top-2 duration-200">
+              <a href="#" data-bundle-type="All" class="bundle-sub-link block px-5 py-2.5 text-sm font-serif font-bold italic hover:bg-gray-50 transition-colors">All Bundles</a>
+              <div class="h-px bg-gray-50 my-1 mx-3"></div>
+              <a href="#" data-bundle-type="Straight" class="bundle-sub-link block px-5 py-2.5 text-sm font-serif font-bold italic hover:bg-gray-50 transition-colors">Straight</a>
+              <a href="#" data-bundle-type="Body Wave" class="bundle-sub-link block px-5 py-2.5 text-sm font-serif font-bold italic hover:bg-gray-50 transition-colors">Body Wave</a>
+              <a href="#" data-bundle-type="Deep Wave" class="bundle-sub-link block px-5 py-2.5 text-sm font-serif font-bold italic hover:bg-gray-50 transition-colors">Deep Wave</a>
+              <a href="#" data-bundle-type="Kinky Curly" class="bundle-sub-link block px-5 py-2.5 text-sm font-serif font-bold italic hover:bg-gray-50 transition-colors">Kinky Curly</a>
+            </div>
+          </div>
+          <a href="#" id="about-link" class="text-sm font-serif font-bold italic hover:text-gray-500 transition-colors">About</a>
+          <a href="#" id="contact-link" class="text-sm font-serif font-bold italic hover:text-gray-500 transition-colors">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <button id="cart-toggle" class="relative p-2 hover:bg-gray-100 rounded-full transition-colors group">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700 group-hover:text-black"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+            <span id="cart-count" class="absolute -top-1 -right-1 bg-black text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-white">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+      <div id="mobile-menu-content" class="absolute top-0 left-0 h-full w-[80%] max-w-xs bg-white shadow-2xl p-8 -translate-x-full transition-transform duration-300 ease-out flex flex-col">
+        <div class="flex items-center justify-between mb-12">
+          <span class="text-2xl font-blackletter tracking-wider">Guss Hairs</span>
+          <button id="mobile-menu-close" class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        
+        <nav class="flex flex-col gap-6">
+          <a href="#" class="mobile-nav-link text-xl font-serif font-bold italic hover:text-gray-500 transition-colors" data-target="home">Home</a>
+          <a href="#" class="mobile-nav-link text-xl font-serif font-bold italic hover:text-gray-500 transition-colors" data-target="shop">Shop All</a>
+          
+          <div class="space-y-4">
+            <button class="mobile-menu-accordion-btn w-full flex items-center justify-between text-xl font-serif font-bold italic hover:text-gray-500 transition-colors">
+              Wigs
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="mobile-menu-accordion-content hidden pl-4 flex flex-col gap-3">
+              <a href="#" class="mobile-nav-link text-lg font-serif font-bold italic text-gray-500 hover:text-black" data-wig-type="All">All Wigs</a>
+              <a href="#" class="mobile-nav-link text-lg font-serif font-bold italic text-gray-500 hover:text-black" data-wig-type="Bone Straight">Bone Straight</a>
+              <a href="#" class="mobile-nav-link text-lg font-serif font-bold italic text-gray-500 hover:text-black" data-wig-type="Pixie Cut">Pixie Cut</a>
+              <a href="#" class="mobile-nav-link text-lg font-serif font-bold italic text-gray-500 hover:text-black" data-wig-type="Deep Wave">Deep Wave</a>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <button class="mobile-menu-accordion-btn w-full flex items-center justify-between text-xl font-serif font-bold italic hover:text-gray-500 transition-colors">
+              Bundles
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="mobile-menu-accordion-content hidden pl-4 flex flex-col gap-3">
+              <a href="#" class="mobile-nav-link text-lg font-serif font-bold italic text-gray-500 hover:text-black" data-bundle-type="All">All Bundles</a>
+              <a href="#" class="mobile-nav-link text-lg font-serif font-bold italic text-gray-500 hover:text-black" data-bundle-type="Straight">Straight</a>
+              <a href="#" class="mobile-nav-link text-lg font-serif font-bold italic text-gray-500 hover:text-black" data-bundle-type="Body Wave">Body Wave</a>
+              <a href="#" class="mobile-nav-link text-lg font-serif font-bold italic text-gray-500 hover:text-black" data-bundle-type="Deep Wave">Deep Wave</a>
+              <a href="#" class="mobile-nav-link text-lg font-serif font-bold italic text-gray-500 hover:text-black" data-bundle-type="Kinky Curly">Kinky Curly</a>
+            </div>
+          </div>
+
+          <a href="#" class="mobile-nav-link text-xl font-serif font-bold italic hover:text-gray-500 transition-colors" data-target="about">About</a>
+          <a href="#" class="mobile-nav-link text-xl font-serif font-bold italic hover:text-gray-500 transition-colors" data-target="contact">Contact</a>
+        </nav>
+
+        <div class="mt-auto pt-8 border-t border-gray-100">
+          <p class="text-xs font-serif font-bold italic text-gray-400 uppercase tracking-widest mb-4">Follow Us</p>
+          <div class="flex gap-4">
+            <a href="#" class="text-gray-400 hover:text-black transition-colors">Instagram</a>
+            <a href="#" class="text-gray-400 hover:text-black transition-colors">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section (Slider) -->
+    <section id="hero-section" class="relative h-[60vh] md:h-[80vh] bg-black text-white overflow-hidden">
+      <!-- Slides Viewport -->
+      <div id="hero-slider" class="absolute inset-0 w-full h-full overflow-hidden">
+        <!-- Slides Wrapper -->
+        <div id="hero-slides-wrapper" class="flex h-full w-full transition-transform duration-1000 ease-in-out">
+          <!-- Slide 1 -->
+          <div class="hero-slide w-full h-full shrink-0 relative">
+            <div class="absolute inset-0 bg-black/40 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&q=80&w=1920" alt="Hero 1" class="w-full h-full object-cover" referrerpolicy="no-referrer" />
+            <div class="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
+              <h1 class="text-5xl md:text-7xl font-script mb-6 tracking-tight leading-tight">Elevate Your Look <br/><span class="italic font-light">With Premium Quality</span></h1>
+              <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light">Experience the luxury of 100% human hair. Hand-picked, ethically sourced, and styled to perfection.</p>
+              <a href="#shop" class="inline-block bg-white text-black px-10 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">Explore Collection</a>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="hero-slide w-full h-full shrink-0 relative">
+            <div class="absolute inset-0 bg-black/40 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=1920" alt="Hero 2" class="w-full h-full object-cover" referrerpolicy="no-referrer" />
+            <div class="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
+              <h1 class="text-5xl md:text-7xl font-script mb-6 tracking-tight leading-tight">Lustrous Bundles <br/><span class="italic font-light">For Every Occasion</span></h1>
+              <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light">From Bone Straight to Deep Wave, find your perfect match in our exclusive bundle deals.</p>
+              <a href="#shop" class="inline-block bg-white text-black px-10 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">Shop Bundles</a>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="hero-slide w-full h-full shrink-0 relative">
+            <div class="absolute inset-0 bg-black/40 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&q=80&w=1920" alt="Hero 3" class="w-full h-full object-cover" referrerpolicy="no-referrer" />
+            <div class="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
+              <h1 class="text-5xl md:text-7xl font-script mb-6 tracking-tight leading-tight">The Perfect Crown <br/><span class="italic font-light">Custom Wigs Just For You</span></h1>
+              <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light">Hand-crafted wigs that offer comfort, style, and a natural look that lasts.</p>
+              <a href="#shop" class="inline-block bg-white text-black px-10 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">View Wigs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider Controls -->
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+        <button class="slider-dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/60 transition-all active" data-index="0"></button>
+        <button class="slider-dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/60 transition-all" data-index="1"></button>
+        <button class="slider-dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/60 transition-all" data-index="2"></button>
+      </div>
+
+      <button id="prev-slide" class="absolute left-6 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/20 hover:bg-black/40 backdrop-blur-sm transition-all border border-white/10 hidden md:block">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button id="next-slide" class="absolute right-6 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/20 hover:bg-black/40 backdrop-blur-sm transition-all border border-white/10 hidden md:block">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </section>
+
+    <!-- Main Content -->
+    <main id="shop-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <h2 class="text-3xl font-script text-gray-900 mb-2">Our Collection</h2>
+          <p class="text-gray-500">Discover our range of premium hair products.</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="text-sm font-serif font-bold italic text-gray-400">Filter by:</span>
+          <select id="category-filter" class="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-serif font-bold italic focus:outline-none focus:ring-2 focus:ring-black/5">
+            <option value="All Products">All Products</option>
+            <option value="Wigs">Wigs</option>
+            <option value="Bundles">Bundles</option>
+            <option value="Frontals">Frontals</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Loading State -->
+      <div id="loading" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="animate-pulse">
+          <div class="bg-gray-200 aspect-[4/5] rounded-2xl mb-4"></div>
+          <div class="h-6 bg-gray-200 rounded w-3/4 mb-2"></div>
+          <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+          <div class="flex justify-between items-center">
+            <div class="h-6 bg-gray-200 rounded w-1/4"></div>
+            <div class="h-10 bg-gray-200 rounded w-1/3"></div>
+          </div>
+        </div>
+        <div class="animate-pulse">
+          <div class="bg-gray-200 aspect-[4/5] rounded-2xl mb-4"></div>
+          <div class="h-6 bg-gray-200 rounded w-3/4 mb-2"></div>
+          <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+          <div class="flex justify-between items-center">
+            <div class="h-6 bg-gray-200 rounded w-1/4"></div>
+            <div class="h-10 bg-gray-200 rounded w-1/3"></div>
+          </div>
+        </div>
+        <div class="animate-pulse">
+          <div class="bg-gray-200 aspect-[4/5] rounded-2xl mb-4"></div>
+          <div class="h-6 bg-gray-200 rounded w-3/4 mb-2"></div>
+          <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+          <div class="flex justify-between items-center">
+            <div class="h-6 bg-gray-200 rounded w-1/4"></div>
+            <div class="h-10 bg-gray-200 rounded w-1/3"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 hidden"></div>
+    </main>
+
+    <!-- About Section -->
+    <section id="about-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-4xl font-script mb-8">About <span class="font-blackletter tracking-wider">Guss Hairs</span></h2>
+          <div class="space-y-6 text-gray-600 leading-relaxed">
+            <p>Founded with a passion for beauty and excellence, <span class="font-blackletter tracking-wider text-black text-lg">Guss Hairs</span> has grown into a leading destination for premium hair extensions and luxury wigs. Our journey began with a simple mission: to empower women by providing access to the highest quality human hair available.</p>
+            
+            <p>We specialize in 100% ethically sourced human hair, ranging from our signature Bone Straight collections to lustrous Deep Wave bundles. Every piece in our collection is hand-picked and undergoes rigorous quality control to ensure it meets our standards of softness, shine, and longevity.</p>
+            
+            <div class="bg-black text-white p-8 rounded-2xl">
+              <h4 class="text-xl font-script font-bold mb-4 italic">"Our Promise"</h4>
+              <p class="text-gray-300 font-serif font-bold italic text-sm">We don't just sell hair; we provide a crown that enhances your natural beauty. Quality is our signature, and your satisfaction is our ultimate goal.</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&q=80&w=1200" alt="About Guss Hairs" class="w-full h-full object-cover" referrerpolicy="no-referrer" />
+          </div>
+          <div class="absolute -bottom-8 -left-8 bg-white p-8 rounded-2xl shadow-xl hidden lg:block">
+            <div class="flex items-center gap-4">
+              <div class="text-4xl font-bold text-black">10+</div>
+              <div class="text-sm text-gray-500 uppercase tracking-widest font-bold">Years of <br/>Excellence</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-8 bg-white rounded-2xl border border-gray-100 shadow-sm">
+          <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-black"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Quality Guaranteed</h3>
+          <p class="text-sm text-gray-500">We only source 100% virgin human hair that can be bleached, dyed, and styled without losing its luster.</p>
+        </div>
+        <div class="p-8 bg-white rounded-2xl border border-gray-100 shadow-sm">
+          <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-black"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Fast Delivery</h3>
+          <p class="text-sm text-gray-500">We understand the excitement of a new look. That's why we prioritize swift and secure shipping to your doorstep.</p>
+        </div>
+        <div class="p-8 bg-white rounded-2xl border border-gray-100 shadow-sm">
+          <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-black"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Expert Support</h3>
+          <p class="text-sm text-gray-500">Our hair experts are available via WhatsApp to guide you in choosing the perfect style for your face shape.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
+          <h2 class="text-4xl font-script mb-6">Get in Touch</h2>
+          <p class="text-gray-500 mb-12 leading-relaxed">
+            Have questions about our premium hair collections or need help choosing the right style? 
+            Our expert team is here to assist you. Fill out the form or reach us directly via our social channels.
+          </p>
+          
+          <div class="space-y-8">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-black rounded-xl flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">WhatsApp</h4>
+                <p class="text-gray-500">07013339219</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-black rounded-xl flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Email</h4>
+                <p class="text-gray-500">hello@gusshairs.com</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-black rounded-xl flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Showroom</h4>
+                <p class="text-gray-500">Lagos, Nigeria</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50">
+          <form id="contact-form" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label class="text-sm font-bold ml-1">Full Name</label>
+                <input type="text" name="name" required class="w-full px-5 py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-black transition-all" placeholder="Jane Doe">
+              </div>
+              <div class="space-y-2">
+                <label class="text-sm font-bold ml-1">Email Address</label>
+                <input type="email" name="email" required class="w-full px-5 py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-black transition-all" placeholder="jane@example.com">
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label class="text-sm font-bold ml-1">Subject</label>
+              <select name="subject" class="w-full px-5 py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-black transition-all">
+                <option>General Inquiry</option>
+                <option>Product Question</option>
+                <option>Order Status</option>
+                <option>Wholesale</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label class="text-sm font-bold ml-1">Message</label>
+              <textarea name="message" required rows="5" class="w-full px-5 py-4 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-black transition-all" placeholder="How can we help you?"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-black text-white py-4 rounded-xl font-bold hover:bg-gray-800 transition-all">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 z-[100] hidden">
+      <div id="cart-overlay" class="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 opacity-0"></div>
+      <div id="cart-panel" class="absolute top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl transform translate-x-full transition-transform duration-500 flex flex-col">
+        <div class="p-6 border-b border-gray-100 flex items-center justify-between">
+          <h2 class="text-xl font-script">Your Shopping Bag</h2>
+          <button id="cart-close" class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        
+        <div id="cart-items" class="flex-grow overflow-y-auto p-6">
+          <!-- Cart items will be rendered here -->
+        </div>
+
+        <div class="p-6 border-t border-gray-100 bg-gray-50/50">
+          <button id="checkout-btn" class="w-full bg-black text-white py-4 rounded-xl font-serif font-bold italic text-lg hover:bg-gray-800 active:scale-[0.98] transition-all flex items-center justify-center gap-3">
+            <span>Checkout via WhatsApp</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </button>
+          <p class="text-center text-xs text-gray-400 mt-4 font-serif font-bold italic">Secure checkout powered by WhatsApp</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          <div class="col-span-1 md:col-span-2">
+            <span class="text-3xl font-blackletter tracking-wider text-black mb-6 block">Guss Hairs</span>
+            <p class="text-gray-500 max-w-sm">The ultimate destination for premium hair extensions and wigs. We believe every woman deserves to feel like a queen.</p>
+          </div>
+          <div>
+            <h4 class="font-serif font-bold italic text-sm uppercase tracking-widest mb-6">Quick Links</h4>
+            <ul class="space-y-4 text-gray-500 text-sm font-serif font-bold italic">
+              <li><a href="#" class="hover:text-black transition-colors">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-black transition-colors">Terms of Service</a></li>
+              <li><a href="#" class="hover:text-black transition-colors">Shipping Info</a></li>
+              <li><a href="#" class="hover:text-black transition-colors">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-serif font-bold italic text-sm uppercase tracking-widest mb-6">Connect</h4>
+            <ul class="space-y-4 text-gray-500 text-sm font-serif font-bold italic">
+              <li><a href="#" class="hover:text-black transition-colors">Instagram</a></li>
+              <li><a href="#" class="hover:text-black transition-colors">Facebook</a></li>
+              <li><a href="#" class="hover:text-black transition-colors">TikTok</a></li>
+              <li><a href="#" class="hover:text-black transition-colors">WhatsApp</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400 font-serif font-bold italic">
+          <p>&copy; 2026 Guss Hairs. All rights reserved.</p>
+          <p>Designed for Elegance</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.tsx"></script>
+  </body>
+</html>
+
