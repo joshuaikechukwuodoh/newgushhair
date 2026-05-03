@@ -1,0 +1,10 @@
+Testing UploadThing setup...
+PASS: UPLOADTHING_TOKEN is set
+PASS: UploadThing endpoint responded, status: 200
+Login response status: 200
+Login response: {"result":{"data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6ImZhODE1YjM5LTBiOGMtNDcxOS05YThiLWYyZTU5NTZlMWIzMCIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJpYXQiOjE3NzUxMDY2MDMsImV4cCI6MTc3NTE5MzAwM30.NVsROF0fRibYrTFR35gjwPmnhiGmXaJn12RVE1QMBx0","admin":{"id":"fa815b39-0b8c-4719-9a8b-f2e5956e1b30","email":"admin@example.com","role":"admin"}}}}
+PASS: Logged in, got JWT token
+Create item status: 200
+Create item response: {"result":{"data":[{"id":"33f748d7-62bc-4530-97b4-59fae540a294","name":"Test Item","description":"Created by test script","image":"https://utfs.io/f/test-placeholder.jpg","createdAt":"2026-04-02T05:10:03.885Z"}]}}
+PASS: Item created in database!
+--- TEST COMPLETE ---
