@@ -11,7 +11,7 @@
   },
   "scripts": {
     "seed": "bun run src/seed.ts",
-    "dev": "bun --watch src/index.ts",
+    "dev": "node api.js && bun --watch src/index.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
