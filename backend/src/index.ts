@@ -1,19 +1,27 @@
+import path from "path";
+import { fileURLToPath } from "url";
 import app from "./app";
 
-// Serve static files (only in Bun environment)
 if (typeof Bun !== "undefined") {
   const { serveStatic } = await import("hono/bun");
-  
-  // Serve admin static files
-  app.use("/admin/*", serveStatic({ root: "../admin/dist" }));
-  app.get("/admin/*", serveStatic({ path: "../admin/dist/index.html" }));
+  const repoRoot = path.resolve(
+    path.dirname(fileURLToPath(import.meta.url)),
+    "../..",
+  );
+  const adminDist = path.join(repoRoot, "admin", "dist");
+  const frontendDist = path.join(repoRoot, "frontend", "dist");
 
-  // Serve frontend static files
-  app.use("/*", serveStatic({ root: "../frontend/dist" }));
-  app.get("/*", serveStatic({ path: "../frontend/dist/index.html" }));
+  app.use("/admin/*", serveStatic({ root: adminDist }));
+  app.get(
+    "/admin/*",
+    serveStatic({ path: path.join(adminDist, "index.html") }),
+  );
+
+  app.use("/*", serveStatic({ root: frontendDist }));
+  app.get("/*", serveStatic({ path: path.join(frontendDist, "index.html") }));
 }
 
 export default {
-  port: 3000,
+  port: Number(process.env.PORT) || 3000,
   fetch: app.fetch,
 };
